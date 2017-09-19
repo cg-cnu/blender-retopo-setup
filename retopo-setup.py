@@ -1,13 +1,7 @@
-'''
-# Blender - Retopology Workflow Setup 
-
-Automates the Setup in the tutorial by [Zacharias Reinhardt](https://youtu.be/2hEHtKH55Us).
-Make the sculpt active and in 3d view press space and type retopo Setup.
-'''
 
 bl_info = {
     "name": "Retopo Setup",
-    "description": "Setup and automate the retopology Workflow",
+    "description": "Retopology workflow setup",
     "author": "Sreenivas Alapati(cg-cnu)",
     "version": (1, 0),
     "blender": (2, 79, 0),
@@ -72,7 +66,6 @@ def main(self, context):
     shrinkwrap_modifier.wrap_method = 'PROJECT'
     shrinkwrap_modifier.show_expanded = False
 
-    # TODO: delete / re use if the material already exists
     # materials
     material = D.materials.new(name="retopo_setup_material")
     C.active_object.data.materials.append(material)
